@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Radar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Risk Radar</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#predictor">Predictor</a></li>
+            <li><a href="#chatbot">Chat Bot</a></li>
+        </ul>
+    </nav>
+    <!-- Home -->
+    <section id="home" class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>RISK RADAR</h1>
+            <p>
+                Predict natural disaster risks using smart data analytics.
+                Stay informed. Stay prepared.
+            </p>
+            <a href="#predictor">
+                <button class="start-btn">Explore Risks</button>
+            </a>
+        </div>
+    </section>
+    <!-- Predictor -->
+    <section id="predictor" class="predictor-section">
+        <h2>Natural Disaster Predictor</h2>
+        <div class="predict-box">
+            <select id="countrySelect">
+                <option value="">Select Country</option>
+                {% for country in countries %}
+                <option value="{{ country }}">{{ country }}</option>
+                {% endfor %}
+            </select>
+            <button onclick="predictRisk()" class="predict-btn">
+                Predict Risk
+            </button>
+        </div>
+        <!-- Results -->
+        <div id="results"></div>
+        <!-- Map -->
+        <div id="map"></div>
+    </section>
+    <!-- Chatbot -->
+    <section id="chatbot" class="chatbot-section">
+        <h2>Emergency Safety Chat Bot</h2>
+        <div class="chat-container">
+            <div id="chatMessages"></div>
+            <button class="chat-btn" onclick="getAdvice()">
+                Get Emergency Advice
+            </button>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

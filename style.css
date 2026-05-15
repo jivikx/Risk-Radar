@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #050505;
+    color: white;
+}
+/* Navbar */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    border-bottom: 2px solid #00ff88;
+}
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00ff88;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #00ff88;
+}
+/* Hero */
+.hero {
+    height: 100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1527489377706-5bf97e608852?q=80&w=1974&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-content h1 {
+    font-size: 90px;
+    color: #00ff88;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 20px #00ff88;
+}
+.hero-content p {
+    width: 70%;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 20px;
+}
+.start-btn {
+    margin-top: 30px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 10px;
+    background: #ff3131;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.start-btn:hover {
+    transform: scale(1.05);
+    background: #ff0000;
+}
+/* Predictor */
+.predictor-section {
+    padding: 120px 50px;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #050505, #0c1c12);
+}
+.predictor-section h2 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 40px;
+    color: #00ff88;
+}
+.predict-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+select {
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid #00ff88;
+    background: black;
+    color: white;
+    font-size: 16px;
+}
+.predict-btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background: #00ff88;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.predict-btn:hover {
+    transform: scale(1.05);
+}
+#results {
+    width: 80%;
+    margin: auto;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #00ff88;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0px 0px 15px rgba(0,255,136,0.3);
+}
+.result-card {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.04);
+}
+.highest-risk {
+    color: #ff3131;
+    font-size: 24px;
+    margin-top: 20px;
+}
+#map {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #00ff88;
+}
+/* Chatbot */
+.chatbot-section {
+    min-height: 100vh;
+    padding: 120px 50px;
+    background: #020202;
+}
+.chatbot-section h2 {
+    text-align: center;
+    font-size: 45px;
+    color: #00ff88;
+    margin-bottom: 40px;
+}
+.chat-container {
+    width: 70%;
+    margin: auto;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #00ff88;
+    border-radius: 15px;
+    padding: 30px;
+}
+#chatMessages {
+    min-height: 150px;
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.chat-message {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: rgba(0,255,136,0.1);
+}
+.chat-btn {
+    padding: 15px 25px;
+    background: #ff3131;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.chat-btn:hover {
+    transform: scale(1.05);
+}
